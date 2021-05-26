@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "NoqbJk5DRkVWJKUMtVlPjaxfm8r/FvY0OIEOjOPITw2ii1Qg6vIp41nT9bC9NDo1U9DQ94fMlKIcyiWHvOsoPQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\estju\\Source\\Repos\\OCR\\dwqeqw\\dwqeqw\\dwqeqw.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\estju\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\opencvsharp-anycpu\\2.4.10.20170306\\opencvsharp-anycpu.2.4.10.20170306.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\opencvsharp4\\4.5.2.20210404\\opencvsharp4.4.5.2.20210404.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\tesseract\\4.1.1\\tesseract.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
