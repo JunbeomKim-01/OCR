@@ -38,15 +38,13 @@ namespace dwqeqw
 
         private void button1_Click(object sender, EventArgs e)//Transelate
         {
-            Bitmap oc = (Bitmap)pictureBox2.Image;
+            Bitmap img = new Bitmap(pictureBox1.Image);
+            var ocr = new TesseractEngine("./tessdata", "kor", EngineMode.Default);
+            var texts = ocr.Process(img);
 
-            
-            pictureBox3.BeginInvoke(new MethodInvoker(delegate
-            {
-               // pictureBox3.Text=ocr;
+            MessageBox.Show(texts.GetText());
 
 
-            }));
         }
 
         private void button3_Click(object sender, EventArgs e)//Imagesave
@@ -75,6 +73,11 @@ namespace dwqeqw
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)//번역된 텍스트가 나오는 박스
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e) //이미지 가져오기
         {
 
         }
