@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenCvSharp-AnyCPU" Version="2.4.10.20170306" />
     <PackageReference Include="OpenCvSharp4" Version="4.5.2.20210404" />
+    <PackageReference Include="System.Security.Permissions" Version="5.0.0" />
     <PackageReference Include="Tesseract" Version="4.1.1" />
   </ItemGroup>
 

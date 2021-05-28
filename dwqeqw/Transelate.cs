@@ -9,18 +9,21 @@ using System.Net;
 
 namespace dwqeqw
 {
-    public class Transelate : ILanguageSetter
+    public class Transelate 
     {
-        private string sours_language;
-        private string target_language;
+        
         const string url = "http://openapi.naver.com/v1/papago/n2mt";
         private string client;
         private string secret;
+        private string sours = "eng";
+        private string target = "eng";
 
-        void ILanguageSetter.SetLanguage(int sours, int target)
+        void LanguageSetter(SetLanguage setLanguage)
         {
-            sours_language = sours == 0 ? "ko" : "en";
-            target_language = target == 0 ? "ko" : "en";
+            if (setLanguage.soursLanuage == "kor")
+                sours = "ko";
+            if (setLanguage.targetLanguage == "eng")
+                sours = "en";
         }
         public void Init(string cl,string sec)
         {
@@ -28,14 +31,17 @@ namespace dwqeqw
             secret = sec;
         }
 
-        void Query(string query)
+       public string Query(string query)
         {
+           
+
+            SetLanguage setLanguage = new SetLanguage();
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.Headers.Add("X-Naver-Client-Id",client);
-            request.Headers.Add("X-Naver-Client-Secret", secret);
+            request.Headers.Add("X-Naver-Client-Id", "4nkoRVSFAPHZ76887wv1");
+            request.Headers.Add("X-Naver-Client-Secret", "S52kXi52p2");
             request.Method = "POST";
 
-            string parse = "source" + sours_language + "&target" + target_language + "&text=" + query;
+            string parse = "source=" +sours + "&target=" +target + "&text=" + query;
 
             byte[] byteDataParams = Encoding.UTF8.GetBytes(parse);
             request.ContentType = "application/x-www-form-urlencoded";
@@ -48,7 +54,19 @@ namespace dwqeqw
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             Stream stream = response.GetResponseStream();
             StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+            string text = reader.ReadToEnd();
+            stream.Close();
+            response.Close();
+            reader.Close();
 
+            string translated_Text = "";
+            int start_index = text.IndexOf("translatedText") + 17;
+            int end_index = text.IndexOf("engineType") - 3;
+
+            for (int i = start_index; i < end_index; ++i)
+                translated_Text += text[i];
+
+            return translated_Text;
 
         }
     }

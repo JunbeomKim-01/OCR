@@ -8,6 +8,5 @@ namespace dwqeqw
     {
         void SetLanguage(int sour,int tar);
 
-
     }
 }

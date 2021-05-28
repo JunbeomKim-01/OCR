@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.Text;
 using Tesseract;
-
+using System.Drawing;
 
 namespace dwqeqw
 {
     public class Ocr
     {
-      // public void OcrProcess(Bitmap oc)
-        //{
-          //  try
-            //{
-              //  using (var engine = new TesseractEngine("", "", EngineMode.TesseractOnly))
-                //{
-                  //  using(var page= engine.Process(oc))
-                    //{
-                      //  return page.GetText();
-                    //}
-                //}
-           // }
-            //catch (Exception.ex)
-            //{
-              //  return ex.ToString();
-          //  }
-       //}
+      // public string ocrprocess(Bitmap  oc)
+      // {
+      //     try
+      //      {
+      //         using (var engine = new TesseractEngine("", "", EngineMode.TesseractOnly))
+      //          {
+      //              using (var page = engine.Process(oc))
+      //              {
+      //                  return page.GetText();
+      //              }
+      //          }
+      //      }
+      //      catch (Exception ex)
+      //      {
+      //          return ex.ToString();
+      //     }
+      //}
 
     }
 }
