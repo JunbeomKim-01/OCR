@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Net;
-
-
-
+using System.Windows.Forms;
 
 namespace dwqeqw
 {
@@ -37,9 +35,7 @@ namespace dwqeqw
 
        public string Query(string query)
         {
-           
 
-           
             LanguageSetter();
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Headers.Add("X-Naver-Client-Id", "4nkoRVSFAPHZ76887wv1");
@@ -75,11 +71,9 @@ namespace dwqeqw
 
         }
 
-        public void update(string ls)
+        public void update(int ls)
         {
-           
+            MessageBox.Show(ls.ToString());
         }
-
-       
     }
 }

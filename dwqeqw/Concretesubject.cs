@@ -8,7 +8,7 @@ namespace dwqeqw
     public class Concretesubject : Subject
     {
         IList _observers = new ArrayList();
-        string _value;
+        int _value;
         public void notifyObservers()
         {
             foreach (Opserver opserver in _observers)
@@ -24,7 +24,7 @@ namespace dwqeqw
         {
             _observers.Remove(opserver);
         }
-        public void setValue(string val)
+        public void setValue(int val)
         {
             _value = val;
             notifyObservers();

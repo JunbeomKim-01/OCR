@@ -19,12 +19,13 @@ using Tesseract;
 
 namespace dwqeqw
 {
-    public partial class Form1 : Form,Subject
+    public partial class Form1 : Form
     {
         private const string Datapath = @"C:\Users\user\source\repos\OCR\dwqeqw\bin\Debug\netcoreapp3.1\tessdata";
         SetLanguage setLanguage = new SetLanguage();
         Concretesubject concretesubject = new Concretesubject();
         IList _observers = new ArrayList();
+        int _index;
         Bitmap bitmap = null;
         string imgsrc = null;
         string texts = null;
@@ -65,13 +66,15 @@ namespace dwqeqw
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cd = (ComboBox)sender;
+            _index = cd.SelectedIndex;
+            concretesubject.setValue(_index);
             setLanguage.SetSoursLanuage(cd);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cd = (ComboBox)sender;
-            notifyObservers();
+            
             setLanguage.SetTargetLanuage(cd);
         }
 
@@ -109,22 +112,6 @@ namespace dwqeqw
             Table table = new Table();
             table.Add(textBox1.Text,textBox2.Text);
             dataGridView1.DataSource = table.GetTable();
-        }
-
-        public void registerObserver(Opserver opserver)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void removeObserver(Opserver opserver)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void notifyObservers()
-        {
-            foreach(Opserver opserver in _observers)
-                opserver.update(texts);
         }
     }
 }
