@@ -5,20 +5,20 @@ using System.Windows.Forms;
 
 namespace dwqeqw
 {
-    class SetLanguage
+    public class SetLanguage
     {
-        public string soursLanuage;
-        public string targetLanguage;
+        public static string soursLanuage;
+        public static string targetLanguage;
    
        public void SetSoursLanuage(ComboBox cd)
         {
             soursLanuage = cd.SelectedIndex > -1 ? cd.SelectedItem.ToString() : null;
-           // MessageBox.Show(soursLanuage);
+          // MessageBox.Show(soursLanuage);
         }
         public void SetTargetLanuage(ComboBox cd)
         {
             targetLanguage = cd.SelectedIndex > -1 ? cd.SelectedItem.ToString() : null;
-            //MessageBox.Show(targetLanguage);
+           // MessageBox.Show(targetLanguage);
         }
     }
 }

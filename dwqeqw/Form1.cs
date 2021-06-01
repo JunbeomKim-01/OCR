@@ -24,7 +24,7 @@ namespace dwqeqw
         SetLanguage setLanguage = new SetLanguage();
         Bitmap bitmap = null;
         string imgsrc = null;
-        Page texts = null;
+        string texts = null;
         public Form1()
         {
 
@@ -40,33 +40,16 @@ namespace dwqeqw
 
         private void button2_Click(object sender, EventArgs e) //cap
         {
-            
-            for (int i = 0; i < bitmap.Width; ++i)
-            {
-                for (int k = 0; k < bitmap.Height; ++k)
-                {
-                   Color color= bitmap.GetPixel(i, k);
-                    int binary = (color.R + color.G + color.B) / 3;
-                    if (binary > 200)
-                        bitmap.SetPixel(i, k, Color.Black);
-                    else
-                        bitmap.SetPixel(i, k, Color.White);
-                }
-            }
-
-
-            //Pix pix =PixConverter.ToPix(bitmap);
-            
-            var ocr = new TesseractEngine(Datapath, setLanguage.soursLanuage);
-            Pix pix = Pix.LoadFromFile(imgsrc);
-            texts = ocr.Process(pix);
-            textBox1.Text = texts.GetText();
+            OCR ocrs = new OCR(bitmap,Datapath);
+            ocrs.Process(imgsrc);
+            texts=ocrs.Process(imgsrc);
+            textBox1.Text = texts;
         }
 
         private void button1_Click(object sender, EventArgs e)//Transelate
         {
             Transelate transelate = new Transelate();
-            MessageBox.Show(transelate.Query(texts.GetText()));
+            textBox2.Text=transelate.Query(texts);
         }
 
         private void button3_Click(object sender, EventArgs e)//Imagesave
@@ -95,11 +78,8 @@ namespace dwqeqw
 
         private void button1_Click_1(object sender, EventArgs e) //이미지 가져오기
         {
-            
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = @"C:\";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-                imgsrc = openFileDialog.FileName;
+            BringImage bringimage = new BringImage();
+            imgsrc = bringimage.Set();
             try
             {
                Bitmap bmp = new Bitmap(imgsrc);
@@ -117,6 +97,12 @@ namespace dwqeqw
         private void textBox2_TextChanged(object sender, EventArgs e)//번역된 텍스트 박스
         {
 
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.Rows.Add();
+            dataGridView1.DataSource = dataTable;
         }
     }
 }

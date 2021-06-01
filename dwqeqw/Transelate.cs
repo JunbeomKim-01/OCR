@@ -12,18 +12,18 @@ namespace dwqeqw
     public class Transelate 
     {
         
-        const string url = "http://openapi.naver.com/v1/papago/n2mt";
+        const string url = "https://openapi.naver.com/v1/papago/n2mt";
         private string client;
         private string secret;
-        private string sours = "eng";
-        private string target = "eng";
+        private string sours = "en";
+        private string target = "en";
 
-        void LanguageSetter(SetLanguage setLanguage)
+        void LanguageSetter()
         {
-            if (setLanguage.soursLanuage == "kor")
+            if ( SetLanguage.soursLanuage== "kor")
                 sours = "ko";
-            if (setLanguage.targetLanguage == "eng")
-                sours = "en";
+            if (SetLanguage.targetLanguage == "kor")
+                target = "ko";
         }
         public void Init(string cl,string sec)
         {
@@ -35,13 +35,14 @@ namespace dwqeqw
         {
            
 
-            SetLanguage setLanguage = new SetLanguage();
+           
+            LanguageSetter();
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Headers.Add("X-Naver-Client-Id", "4nkoRVSFAPHZ76887wv1");
             request.Headers.Add("X-Naver-Client-Secret", "S52kXi52p2");
             request.Method = "POST";
-
-            string parse = "source=" +sours + "&target=" +target + "&text=" + query;
+        
+            string parse = "source=" +sours + "&target=" +target + "&text="+query ;
 
             byte[] byteDataParams = Encoding.UTF8.GetBytes(parse);
             request.ContentType = "application/x-www-form-urlencoded";
