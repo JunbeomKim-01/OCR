@@ -9,14 +9,16 @@ using System.Net;
 
 namespace dwqeqw
 {
-    public class Transelate 
+    public class Transelate :Opserver
     {
         
         const string url = "https://openapi.naver.com/v1/papago/n2mt";
         private string client;
         private string secret;
+        Concretesubject _subject;
         private string sours = "en";
         private string target = "en";
+
 
         void LanguageSetter()
         {
@@ -25,8 +27,10 @@ namespace dwqeqw
             if (SetLanguage.targetLanguage == "kor")
                 target = "ko";
         }
-        public void Init(string cl,string sec)
+        public void Init(string cl,string sec,Concretesubject concretesubject)
         {
+            _subject = concretesubject;
+            concretesubject.registerObserver(this);
             client = cl;
             secret = sec;
         }
@@ -70,5 +74,12 @@ namespace dwqeqw
             return translated_Text;
 
         }
+
+        public void update(string ls)
+        {
+           
+        }
+
+       
     }
 }

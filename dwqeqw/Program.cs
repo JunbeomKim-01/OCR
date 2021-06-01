@@ -18,9 +18,6 @@ namespace dwqeqw
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            Transelate transelate = new Transelate();
-            transelate.Init("4nkoRVSFAPHZ76887wv1", "S52kXi52p2");
-
         }
     }
 }

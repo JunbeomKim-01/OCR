@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +19,12 @@ using Tesseract;
 
 namespace dwqeqw
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form,Subject
     {
         private const string Datapath = @"C:\Users\user\source\repos\OCR\dwqeqw\bin\Debug\netcoreapp3.1\tessdata";
         SetLanguage setLanguage = new SetLanguage();
+        Concretesubject concretesubject = new Concretesubject();
+        IList _observers = new ArrayList();
         Bitmap bitmap = null;
         string imgsrc = null;
         string texts = null;
@@ -29,6 +32,7 @@ namespace dwqeqw
         {
 
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,6 +53,7 @@ namespace dwqeqw
         private void button1_Click(object sender, EventArgs e)//Transelate
         {
             Transelate transelate = new Transelate();
+            transelate.Init("4nkoRVSFAPHZ76887wv1", "S52kXi52p2",concretesubject);
             textBox2.Text=transelate.Query(texts);
         }
 
@@ -66,6 +71,7 @@ namespace dwqeqw
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cd = (ComboBox)sender;
+            notifyObservers();
             setLanguage.SetTargetLanuage(cd);
         }
 
@@ -100,9 +106,25 @@ namespace dwqeqw
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataTable dataTable = new DataTable();
-            dataTable.Rows.Add();
-            dataGridView1.DataSource = dataTable;
+            Table table = new Table();
+            table.Add(textBox1.Text,textBox2.Text);
+            dataGridView1.DataSource = table.GetTable();
+        }
+
+        public void registerObserver(Opserver opserver)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void removeObserver(Opserver opserver)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void notifyObservers()
+        {
+            foreach(Opserver opserver in _observers)
+                opserver.update(texts);
         }
     }
 }
