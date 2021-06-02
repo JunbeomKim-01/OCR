@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "SwQD0qf22DtEwipf8hs4oaSLsP0D+w4KNmf0j6bQIZvRlO1tAXYsh7gCryo0JyurshVltHnYBXdHDZyvrYbdIQ==",
+  "dgSpecHash": "xGLvIWZDVneElYZf8jGgGwxBnqlgxnafCTXDW3Td14vtY0Z6gOGrxX65Z9gNGIpRbA8o9+E/sBJdoz+bHyKQrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\OCR\\dwqeqw\\dwqeqw.csproj",
+  "projectFilePath": "C:\\windowForm_Project\\OCR1\\dwqeqw\\dwqeqw.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\opencvsharp4\\4.5.2.20210404\\opencvsharp4.4.5.2.20210404.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\tesseract\\4.1.1\\tesseract.4.1.1.nupkg.sha512"
+    "C:\\Users\\estju\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\opencvsharp4\\4.5.2.20210404\\opencvsharp4.4.5.2.20210404.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\estju\\.nuget\\packages\\tesseract\\4.1.1\\tesseract.4.1.1.nupkg.sha512"
   ],
   "logs": []
 }

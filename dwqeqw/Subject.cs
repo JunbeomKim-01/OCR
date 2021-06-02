@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dwqeqw
 {
-    interface Subject
+    public interface Subject
     {
         void registerObserver(Opserver opserver);
         void removeObserver(Opserver opserver);

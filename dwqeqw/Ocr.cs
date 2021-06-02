@@ -7,11 +7,20 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace dwqeqw
 {
-    class OCR
+    class OCR: Opserver,ILanguageSetter
     {
         private Bitmap bitmap;
+        Subject _subject;
         private string path;
-        public OCR(Bitmap bitmap,string path)
+        private string sourse;
+        
+        public OCR(Subject subject)
+        {
+            _subject = subject;
+            subject.registerObserver(this);
+            
+        }
+        public void Init(Bitmap bitmap, string path)
         {
             this.bitmap = bitmap;
             this.path = path;
@@ -34,10 +43,14 @@ namespace dwqeqw
        public string Process(string imgsrc)
         {
             ToBinary();
-            var ocr = new TesseractEngine(path, SetLanguage.soursLanuage, EngineMode.Default);
+            var ocr = new TesseractEngine(path, sourse, EngineMode.Default);
             Pix pix = Pix.LoadFromFile(imgsrc);
             Page texts = ocr.Process(pix);
             return texts.GetText();
         }
+        public void update(int[] index)=>SetLanguage(index);
+        public void SetLanguage(int[] index) =>sourse = index[0] == 0 ? "kor" : "eng";
+         
+        
     }
 }

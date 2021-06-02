@@ -7,28 +7,23 @@ using System.Windows.Forms;
 
 namespace dwqeqw
 {
-    public class Transelate :Opserver
+    public class Transelate :Opserver, ILanguageSetter
     {
         
         const string url = "https://openapi.naver.com/v1/papago/n2mt";
         private string client;
         private string secret;
-        Concretesubject _subject;
-        private string sours = "en";
-        private string target = "en";
+        Subject _subject;
+        private string sours;
+        private string target;
 
-
-        void LanguageSetter()
+        public Transelate(Subject subject)
         {
-            if ( SetLanguage.soursLanuage== "kor")
-                sours = "ko";
-            if (SetLanguage.targetLanguage == "kor")
-                target = "ko";
+            this._subject = subject;
+            subject.registerObserver(this);
         }
-        public void Init(string cl,string sec,Concretesubject concretesubject)
+        public void Init(string cl,string sec)
         {
-            _subject = concretesubject;
-            concretesubject.registerObserver(this);
             client = cl;
             secret = sec;
         }
@@ -36,7 +31,7 @@ namespace dwqeqw
        public string Query(string query)
         {
 
-            LanguageSetter();
+            
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Headers.Add("X-Naver-Client-Id", "4nkoRVSFAPHZ76887wv1");
             request.Headers.Add("X-Naver-Client-Secret", "S52kXi52p2");
@@ -71,9 +66,13 @@ namespace dwqeqw
 
         }
 
-        public void update(int ls)
+        public void SetLanguage(int[] index)
         {
-            MessageBox.Show(ls.ToString());
+            sours = index[0]==0? "ko" : "en";
+            target = index[1] == 0 ? "ko" : "en";
         }
+
+        void Opserver.update(int[] ls) => SetLanguage(ls);
+        
     }
 }

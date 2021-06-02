@@ -6,7 +6,6 @@ namespace dwqeqw
 {
     public interface Opserver
     {
-        void update(int ls);
-
+        void update(int[] ls);
     }
 }

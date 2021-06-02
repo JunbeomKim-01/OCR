@@ -6,7 +6,6 @@ namespace dwqeqw
 {
     public interface ILanguageSetter
     {
-        void SetLanguage(int sour,int tar);
-
+       public void SetLanguage(int[] index);
     }
 }
