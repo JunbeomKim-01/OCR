@@ -7,14 +7,16 @@ using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
 namespace dwqeqw
 {
-    class Excels
+    class Excels:ImageSetter
     {
         static Microsoft.Office.Interop.Excel.Application excelApp = null; 
         static Microsoft.Office.Interop.Excel.Workbook workBook = null; 
         static Microsoft.Office.Interop.Excel.Worksheet workSheet = null;
         Table table;
+        string desktopPath;
+        string path;
 
-      public Excels(Table table)
+        public Excels(Table table)
         {
             this.table = table;
         } 
@@ -22,9 +24,7 @@ namespace dwqeqw
         {
             try
             {
-                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // 바탕화면 경로
-                string path = Path.Combine(desktopPath, "Exl.xlsx"); // 엑셀 파일 저장 경로
-
+                SetPath();
                 excelApp = new Microsoft.Office.Interop.Excel.Application(); // 엑셀 어플리케이션 생성
                 workBook = excelApp.Workbooks.Add(); // 워크북 추가
                 workSheet = workBook.Worksheets.get_Item(1) as Microsoft.Office.Interop.Excel.Worksheet; // 엑셀 첫번째 워크시트 가져오기 workSheet.Cells[1, 1] = "이름"; workSheet.Cells[1, 2] = "종류"; workSheet.Cells[1, 3] = "성별";
@@ -81,6 +81,11 @@ namespace dwqeqw
                 GC.Collect();
             }
         }
-        
+
+        public void SetPath()
+        {
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // 바탕화면 경로
+            string path = Path.Combine(desktopPath, "Exl.xlsx"); // 엑셀 파일 저장 경로
+        }
     }
 }

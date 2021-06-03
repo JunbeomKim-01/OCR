@@ -5,20 +5,13 @@ using System.Windows.Forms;
 
 namespace dwqeqw
 {
-    class SaveImage : ImageSetter
+    class SaveImage
     {
         Table Table;
         
         public SaveImage(Table table)
         {
             this.Table = table;
-        }
-        public void SetPath()
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "저장경로를 지정하세요";
-            saveFileDialog.OverwritePrompt = true;
-            saveFileDialog.Filter = "";
         }
         public void Set()
         {
