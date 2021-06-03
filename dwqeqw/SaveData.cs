@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace dwqeqw
 {
-    class SaveImage
+    class SaveData
     {
         Table Table;
         
-        public SaveImage(Table table)
+        public SaveData(Table table)
         {
             this.Table = table;
         }

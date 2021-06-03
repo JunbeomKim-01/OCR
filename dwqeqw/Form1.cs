@@ -141,7 +141,7 @@ namespace dwqeqw
 
         private void metroButton3_Click(object sender, EventArgs e)//Save
         {
-             SaveImage saveImage = new SaveImage(table);
+             SaveData saveImage = new SaveData(table);
              saveImage.Set();
            // MessageBox.Show(table.dataTable.Rows[0][0].ToString());
         }
