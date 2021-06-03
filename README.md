@@ -2,7 +2,8 @@
 
 ## 디자인 
 <img src="https://user-images.githubusercontent.com/72601028/120605972-a3a51200-c489-11eb-8632-64815352f9ef.PNG">
-
+## 실행화면 .1
+<img src="https://user-images.githubusercontent.com/72601028/120607602-4c07a600-c48b-11eb-951f-a5971cdcd0ec.PNG">
 ## 디자인 패턴
 ### 디자인 패턴은 옵저버 패턴을 사용하였습니다.
 
