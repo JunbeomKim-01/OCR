@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace dwqeqw
 {
-    public class Transelate :Opserver, ILanguageSetter
+    public class Translate :Opserver, ILanguageSetter
     {
         
         const string url = "https://openapi.naver.com/v1/papago/n2mt";
@@ -17,7 +17,7 @@ namespace dwqeqw
         private string sours;
         private string target;
 
-        public Transelate(Subject subject)
+        public Translate(Subject subject)
         {
             this._subject = subject;
             subject.registerObserver(this);

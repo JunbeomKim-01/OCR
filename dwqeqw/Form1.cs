@@ -29,14 +29,14 @@ namespace dwqeqw
         Bitmap bitmap = null;
         string imgsrc = null;
         OCR ocrs=null;
-        Transelate transelate;
+        Translate transelate;
         Table table;
         public OCRTranslate()
         { 
            // this.BackgroundImage = Properties.Resources.shutterstock;
             table = new Table(dataTable, this);
             ocrs = new OCR(this);
-            transelate = new Transelate(this);
+            transelate = new Translate(this);
             table.AddColumns("날짜");
             table.AddColumns("원문내용");
             table.AddColumns("번역내용");
@@ -77,16 +77,12 @@ namespace dwqeqw
             
         }
 
-        public void registerObserver(Opserver opserver)
-        {
-            _observers.Add(opserver);
-        }
+        public void registerObserver(Opserver opserver)=> _observers.Add(opserver);
+        
 
-        public void removeObserver(Opserver opserver)
-        {
-            _observers.Remove(opserver);
+        public void removeObserver(Opserver opserver) => _observers.Remove(opserver);
 
-        }
+       
 
         public void notifyObservers()
         {
