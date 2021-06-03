@@ -8,10 +8,8 @@ namespace dwqeqw
     class BringImage : ImageSetter
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
-        public void SetPath()
-        {
-            openFileDialog.InitialDirectory = @"C:\";
-        }
+        public void SetPath()=>  openFileDialog.InitialDirectory = @"C:\";
+        
        public string Set()
         {
             string imgsrc = null;

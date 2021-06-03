@@ -8,12 +8,50 @@
     ".NETCoreApp,Version=v3.1": {
       "dwqeqw/1.0.0": {
         "dependencies": {
+          "MetroFramework": "1.2.0.3",
+          "MetroFramework.Design": "1.2.0.3",
+          "MetroModernUI": "1.4.0",
           "OpenCvSharp4": "4.5.2.20210404",
           "System.Security.Permissions": "5.0.0",
-          "Tesseract": "4.1.1"
+          "Tesseract": "4.1.1",
+          "Interop.Microsoft.Office.Interop.Excel": "1.7.0.0"
         },
         "runtime": {
           "dwqeqw.dll": {}
+        }
+      },
+      "MetroFramework/1.2.0.3": {
+        "dependencies": {
+          "MetroFramework.Design": "1.2.0.3",
+          "MetroFramework.Fonts": "1.2.0.3",
+          "MetroFramework.RunTime": "1.2.0.3"
+        }
+      },
+      "MetroFramework.Design/1.2.0.3": {
+        "dependencies": {
+          "MetroFramework.RunTime": "1.2.0.3"
+        }
+      },
+      "MetroFramework.Fonts/1.2.0.3": {
+        "dependencies": {
+          "MetroFramework.RunTime": "1.2.0.3"
+        }
+      },
+      "MetroFramework.RunTime/1.2.0.3": {},
+      "MetroModernUI/1.4.0": {
+        "runtime": {
+          "lib/net/MetroFramework.Design.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          },
+          "lib/net/MetroFramework.Fonts.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          },
+          "lib/net/MetroFramework.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/5.0.0": {},
@@ -171,6 +209,14 @@
             "fileVersion": "4.1.1.0"
           }
         }
+      },
+      "Interop.Microsoft.Office.Interop.Excel/1.7.0.0": {
+        "runtime": {
+          "Interop.Microsoft.Office.Interop.Excel.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
+          }
+        }
       }
     }
   },
@@ -179,6 +225,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MetroFramework/1.2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PldREwx2yJ9GFXoR4IsXgsrTuOOEL1c5qZYeIfv9SVCSd7cJobmNRDHo+2v78E6U1lIWHM+ZIceZEETdOj0+oA==",
+      "path": "metroframework/1.2.0.3",
+      "hashPath": "metroframework.1.2.0.3.nupkg.sha512"
+    },
+    "MetroFramework.Design/1.2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JhXzz2m1ofJu+vcqxib1s9nmI1akoDHTRweNISsVcvk38bVabqHpwrTpwvz3z4lcwqIe19/B6M4Rrk5uXdNmhA==",
+      "path": "metroframework.design/1.2.0.3",
+      "hashPath": "metroframework.design.1.2.0.3.nupkg.sha512"
+    },
+    "MetroFramework.Fonts/1.2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5PAtJsIKfg4bzXPH3MeS4UFDxc4bgCe9yEEg+HS9+lOuwdChpMtawFw0XK4/u7OZxnCfkcHbnjTpu4IUpBBsfA==",
+      "path": "metroframework.fonts/1.2.0.3",
+      "hashPath": "metroframework.fonts.1.2.0.3.nupkg.sha512"
+    },
+    "MetroFramework.RunTime/1.2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7AFviJ+uFd/jApvUzOU8mMzl3NCj/sjIKQgCeJqqEEc78R6LoOTH+qGFZBRIEV+6nqgt9h2Y/ei6xVkTNZ3sJA==",
+      "path": "metroframework.runtime/1.2.0.3",
+      "hashPath": "metroframework.runtime.1.2.0.3.nupkg.sha512"
+    },
+    "MetroModernUI/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p2F3w8bF1tb0tpkDceEVO65UYMKnJxdQyNxVyl/OjrFZHighicLYZDppKkiqmvBZ10XUi2mqHiIJUzXBP3GElQ==",
+      "path": "metromodernui/1.4.0",
+      "hashPath": "metromodernui.1.4.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/5.0.0": {
       "type": "package",
@@ -263,6 +344,11 @@
       "sha512": "sha512-abufaW6N3P7TGJPI3RNTMSzS1ycnE1w6aW/Q+Hco/wCgm+bXUgR87JsGELvTcm2FISXGlQgs+PvYMVo9SlcPfg==",
       "path": "tesseract/4.1.1",
       "hashPath": "tesseract.4.1.1.nupkg.sha512"
+    },
+    "Interop.Microsoft.Office.Interop.Excel/1.7.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
