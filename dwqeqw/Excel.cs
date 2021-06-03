@@ -23,7 +23,7 @@ namespace dwqeqw
             try
             {
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // 바탕화면 경로
-                string path = Path.Combine(desktopPath, DateTime.Now.ToString("yyyyMMdd") +".xlsx"); // 엑셀 파일 저장 경로
+                string path = Path.Combine(desktopPath, "Exl.xlsx"); // 엑셀 파일 저장 경로
 
                 excelApp = new Microsoft.Office.Interop.Excel.Application(); // 엑셀 어플리케이션 생성
                 workBook = excelApp.Workbooks.Add(); // 워크북 추가
@@ -35,8 +35,8 @@ namespace dwqeqw
                 workSheet.Cells[1, 4] = "원문언어";
                 workSheet.Cells[1, 5] = "번역언어";
 
-                for (int i = 0; i < table.dataTable.Rows.Count - 1; ++i)
-                    for (int e = 0; e < table.dataTable.Columns.Count - 1; ++e)
+                for (int i = 0; i < table.dataTable.Rows.Count; ++i)
+                    for (int e = 0; e < 5; ++e)
                        workSheet.Cells[2 + i, e+1] = table.dataTable.Rows[i][e];
 
                workSheet.Columns.AutoFit(); // 열 너비 자동 맞춤
