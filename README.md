@@ -19,7 +19,9 @@
 ##### opserver의 update메소드를 통해 구독한 객체에게 알려 현재 선택된 인덱스의 정보를 갱신합니다.
 <img src="https://user-images.githubusercontent.com/72601028/120606604-51b0bc00-c48a-11eb-9466-417997a0e219.PNG">
 
-
+### 저장 화면
+#### 데이터는 엑셀파일형식으로 저장하였습니다.엑셀파일은 나중에 .csv 파일 형식으로 쉽게 변환할 수 있기 때문에 나중에 있을 인공지능의 데이터 셋을 염두했습니다
+<img src="https://user-images.githubusercontent.com/72601028/120608318-07c8d580-c48c-11eb-85b0-b518f924b203.PNG">
 
 
 
