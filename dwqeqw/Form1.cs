@@ -21,8 +21,7 @@ namespace dwqeqw
 {
     public partial class OCRTranslate : MetroFramework.Forms.MetroForm, Subject
     {
-        private const string Datapath = @"C:\Users\user\source\repos\OCR\dwqeqw\bin\Debug\netcoreapp3.1\tessdata";
-        private const string junpath = @"C:\windowForm_Project\OCR1\dwqeqw\bin\Debug\netcoreapp3.1\tessdata";
+        private readonly string Datapath = Environment.CurrentDirectory + @"\tessdata";
         IList _observers = new ArrayList();
         DataTable dataTable = new DataTable();
         int[] _index = { 0, 0 };//0번 인덱스는 원본언어, 1번 인덱스는 번역언어
