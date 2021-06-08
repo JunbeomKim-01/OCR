@@ -32,7 +32,6 @@ namespace dwqeqw
         Table table;
         public OCRTranslate()
         { 
-           // this.BackgroundImage = Properties.Resources.shutterstock;
             table = new Table(dataTable, this);
             ocrs = new OCR(this);
             transelate = new Translate(this);
@@ -43,22 +42,7 @@ namespace dwqeqw
             table.AddColumns("번역언어");
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e){  }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox cd = (ComboBox)sender;
-            _index[0] = cd.SelectedIndex;
-            notifyObservers();
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox cd = (ComboBox)sender;
-            _index[1] = cd.SelectedIndex;
-            notifyObservers();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -75,35 +59,28 @@ namespace dwqeqw
         {
             
         }
-
-        public void registerObserver(Opserver opserver)=> _observers.Add(opserver);
         
-
-        public void removeObserver(Opserver opserver) => _observers.Remove(opserver);
-
-       
-
+        
+        public void registerObserver(Observer observer)=> _observers.Add(observer);
+        public void removeObserver(Observer observer) => _observers.Remove(observer);
         public void notifyObservers()
         {
-            foreach(Opserver opserver in _observers)
-                opserver.update(_index);
+            foreach(Observer observer in _observers)
+                observer.update(_index);
 
         }
-
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cd = (ComboBox)sender;
             _index[0] = cd.SelectedIndex;
             notifyObservers();
         }
-
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox cd = (ComboBox)sender;
             _index[1] = cd.SelectedIndex;
             notifyObservers();
         }
-
         private void metroButton1_Click(object sender, EventArgs e)//translate
         {
             try
@@ -122,11 +99,11 @@ namespace dwqeqw
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void metroButton2_Click(object sender, EventArgs e)//Cap
         {
             try
             {
+               
                 ocrs.Init(bitmap, Datapath);
                 if (bitmap == null)
                     throw new Exception("사진또는 내용이 존재하지 않습니다.");
@@ -137,14 +114,12 @@ namespace dwqeqw
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void metroButton3_Click(object sender, EventArgs e)//Save
         {
              SaveData saveImage = new SaveData(table);
              saveImage.Set();
-           // MessageBox.Show(table.dataTable.Rows[0][0].ToString());
+          
         }
-
         private void metroButton4_Click(object sender, EventArgs e)//Bring Image
         {
             BringImage bringimage = new BringImage();
@@ -157,7 +132,6 @@ namespace dwqeqw
             }
             catch { }
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

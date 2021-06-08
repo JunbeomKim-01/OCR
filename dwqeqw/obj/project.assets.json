@@ -715,19 +715,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\estju\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\windowForm_Project\\OCR1\\dwqeqw\\dwqeqw.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\OCR\\dwqeqw\\dwqeqw.csproj",
       "projectName": "dwqeqw",
-      "projectPath": "C:\\windowForm_Project\\OCR1\\dwqeqw\\dwqeqw.csproj",
-      "packagesPath": "C:\\Users\\estju\\.nuget\\packages\\",
-      "outputPath": "C:\\windowForm_Project\\OCR1\\dwqeqw\\obj\\",
+      "projectPath": "C:\\Users\\user\\source\\repos\\OCR\\dwqeqw\\dwqeqw.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\OCR\\dwqeqw\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\estju\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -739,6 +739,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -750,6 +751,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MetroFramework": {
             "target": "Package",
@@ -794,7 +796,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },

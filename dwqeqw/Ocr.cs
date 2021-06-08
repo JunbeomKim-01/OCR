@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace dwqeqw
 {
-    class OCR: Opserver,ILanguageSetter
+    class OCR: Observer,ILanguageSetter
     {
         private Bitmap bitmap;
         Subject _subject;

@@ -85,7 +85,7 @@ namespace dwqeqw
         public void SetPath()
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // 바탕화면 경로
-            string path = Path.Combine(desktopPath, "Exl.xlsx"); // 엑셀 파일 저장 경로
+            path = Path.Combine(desktopPath, "Exle.xlsx"); // 엑셀 파일 저장 경로
         }
     }
 }

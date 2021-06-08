@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dwqeqw
 {
-    public interface Opserver
+    public interface Observer
     {
         void update(int[] ls);
     }

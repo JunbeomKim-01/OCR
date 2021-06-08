@@ -6,8 +6,8 @@ namespace dwqeqw
 {
     public interface Subject
     {
-        void registerObserver(Opserver opserver);
-        void removeObserver(Opserver opserver);
+        void registerObserver(Observer observer);
+        void removeObserver(Observer observer);
         void notifyObservers();
     }
 }

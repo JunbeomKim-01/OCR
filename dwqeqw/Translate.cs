@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace dwqeqw
 {
-    public class Translate :Opserver, ILanguageSetter
+    public class Translate :Observer, ILanguageSetter
     {
         
         const string url = "https://openapi.naver.com/v1/papago/n2mt";
@@ -16,7 +16,6 @@ namespace dwqeqw
         Subject _subject;
         private string sours;
         private string target;
-
         public Translate(Subject subject)
         {
             this._subject = subject;
@@ -27,8 +26,7 @@ namespace dwqeqw
             client = cl;
             secret = sec;
         }
-
-       public string Query(string query)
+        public string Query(string query)
         {
 
             
@@ -65,14 +63,12 @@ namespace dwqeqw
             return translated_Text;
 
         }
-
         public void SetLanguage(int[] index)
         {
             sours = index[0]==0? "ko" : "en";
             target = index[1] == 0 ? "ko" : "en";
         }
-
-        void Opserver.update(int[] ls) => SetLanguage(ls);
+        void Observer.update(int[] ls) => SetLanguage(ls);
         
     }
 }

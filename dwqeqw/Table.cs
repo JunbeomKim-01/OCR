@@ -5,7 +5,7 @@ using System.Text;
 
 namespace dwqeqw
 {
-    class Table: Opserver
+    class Table: Observer
     {
         Subject _subject;
        public DataTable dataTable;
@@ -20,7 +20,7 @@ namespace dwqeqw
         public void AddColumns(string parse)    =>  dataTable.Columns.Add(parse);      
         public void AddRows(string parse ,string  transelated)  => dataTable.Rows.Add(DateTime.Now.ToString("yyyyMMdd"),parse, transelated, sourse,target);
         public DataTable GetTable() => dataTable;
-        void Opserver.update(int[] ls) => SetLanguage(ls);
+        void Observer.update(int[] ls) => SetLanguage(ls);
         public void SetLanguage(int[] ls)
         {
             
