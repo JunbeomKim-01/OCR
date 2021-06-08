@@ -21,7 +21,7 @@ namespace dwqeqw
 {
     public partial class OCRTranslate : MetroFramework.Forms.MetroForm, Subject
     {
-        private readonly string Datapath = Environment.CurrentDirectory + @"\tessdata";
+        private  string Datapath = Environment.CurrentDirectory;
         IList _observers = new ArrayList();
         DataTable dataTable = new DataTable();
         int[] _index = { 0, 0 };//0번 인덱스는 원본언어, 1번 인덱스는 번역언어
@@ -42,7 +42,9 @@ namespace dwqeqw
             table.AddColumns("번역언어");
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e){  }
+        private void Form1_Load(object sender, EventArgs e){
+            Datapath = Datapath.Substring(0,Datapath.IndexOf("bin"))+ @"bin\Debug\netcoreapp3.1\tessdata";
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -103,7 +105,6 @@ namespace dwqeqw
         {
             try
             {
-               
                 ocrs.Init(bitmap, Datapath);
                 if (bitmap == null)
                     throw new Exception("사진또는 내용이 존재하지 않습니다.");
